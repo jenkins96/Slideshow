@@ -3,10 +3,12 @@ let p = {
     paginacion: document.querySelectorAll("#paginacion li"),
     item: 0,
     cajaSlide: document.querySelector('#slide ul'),
-    animacionSlide: "fade",
+    animacionSlide: "slide",
     imgSlide: document.querySelectorAll("#slide ul li"),
     avanzar: document.querySelector("#slide #avanzar"),
-    retroceder: document.querySelector("#slide #retroceder")
+    retroceder: document.querySelector("#slide #retroceder"),
+    velocidadSlide: 3000,
+    formatearLoop: false
 
 };
 
@@ -19,53 +21,67 @@ let m = {
     inicioSlide() {
         for (let i = 0; i < p.paginacion.length; i++) {
             p.paginacion[i].addEventListener("click", m.paginacionSlide)
+            p.imgSlide[i].style.width = (100 / p.paginacion.length) + "%";
         }
         p.avanzar.addEventListener("click", m.avanzar);
         p.retroceder.addEventListener("click", m.retroceder);
+        m.intervalo();
+        p.cajaSlide.style.width = (p.paginacion.length*100) + "%";
     },
     paginacionSlide(item) {
         p.item = item.target.parentNode.getAttribute('item') - 1;
         m.movimientoSlide(p.item)
 
     },
-    avanzar(){
-        
-        if(p.item == p.imgSlide.length-1){
+    avanzar() {
+
+        if (p.item == p.imgSlide.length - 1) {
             p.item = 0;
-        }else {
+        } else {
             p.item++;
         }
-        
+
         m.movimientoSlide(p.item);
     },
-    retroceder(){
-        if(p.item == 0){
+    retroceder() {
+        if (p.item == 0) {
             p.item = p.imgSlide.length - 1;
-        }else {
+        } else {
             p.item--;
         }
-        
+
         m.movimientoSlide(p.item);
-    } ,
+    },
     movimientoSlide(item) {
+        p.formatearLoop = true;
         p.cajaSlide.style.left = item * -100 + '%'
         for (let i = 0; i < p.paginacion.length; i++) {
             p.paginacion[i].style.opacity = .5;
         }
         p.paginacion[item].style.opacity = 1;
-        if(p.animacionSlide == "slide"){
+        if (p.animacionSlide == "slide") {
             p.cajaSlide.style.transition = ".7s left ease-in-out";
         }
-        if(p.animacionSlide == "fade"){
-            
+        if (p.animacionSlide == "fade") {
+
             p.imgSlide[item].style.opacity = 0;
             p.imgSlide[item].style.transition = ".7s opacity ease-in-out";
-            setTimeout(function(){
-                
+            setTimeout(function () {
+
                 p.imgSlide[item].style.opacity = 1;
-            },500)
-            
+            }, 500)
+
         }
+    },
+    intervalo() {
+        setInterval(function () {
+            if (p.formatearLoop) {
+                p.formatearLoop = false;
+            } else {
+                m.avanzar();
+            }
+
+        }, p.velocidadSlide)
     }
 };
 
