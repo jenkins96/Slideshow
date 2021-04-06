@@ -13,9 +13,11 @@
 </head>
 
 <body>
+   <!-- <section id='fotoFondo'></section>  ARREGLAR ESTO-->
     <div class='content-fluid'>
+        
         <!--HEADER-->
-        <header class='row'>
+        <header id="header" class='row'>
             <figure id='logotipo' class='col-lg-2 col-md-3 col-sm-2 col-xs-12'>
                 <img src='img/logotipo.png' alt='Logotipo'>
             </figure>
@@ -24,12 +26,12 @@
             </div>
             <nav class='col-lg-6 col-md-7 col-sm-9 col-xs-12'>
                 <ul>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton1</a></li>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton2</a></li>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton3</a></li>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton4</a></li>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton5</a></li>
-                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Boton6</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#header'>Inicio</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#inicioGaleria'>Galeria</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#inicioMouse'>Mouse</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#inicioScroll'>Scroll</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Formulario</a></li>
+                    <li class='col-lg-2 col-md-2 col-sm-2 col-xs-12'><a href='#'>Angular</a></li>
                 </ul>
             </nav>
         </header>
@@ -76,6 +78,11 @@
             <div class='flechas' id="avanzar"><span><i class="fas fa-chevron-right"></i></span></div>
         </div>
         <!--GALERIA-->
+        <h1 id="inicioGaleria" class="row titles">
+            <hr>
+            Galería de Imágenes
+            <hr>
+        </h1>
         <div id="galeria" class="row">
             <ul>
                 <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="img/galeria/imagen01.jpg" alt=""></li>
@@ -96,10 +103,100 @@
         </div>
 
         <!--EFECTO DE MOUSE-->
+         <h1 id="inicioMouse" class="row titles">
+            <hr>
+            Efecto con el Mouse
+            <hr>
+        </h1>
         <div id="efectoMouse" class="row">
             <figure></figure>
             <figure></figure>
             <figure></figure>
+        </div>
+        
+        <!--EFECTO DE SCROLL-->
+         <h1 id="inicioScroll" class="row titles">
+            <hr>
+            Efecto con el Scroll
+            <hr>
+        </h1>
+        <div id='scroll'>
+            <!-- Articulo 1 -->
+            <article class='row'>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+                <aside class='col-lg-8 col-md-8 col-sm-10 col-xs-12'>
+                    <figure class='col-lg-3 col-md-5 col-sm-6 col-xs-12'>
+                        <img src='img/galeria/imagen01.jpg' alt="">
+                    </figure>
+                    <div class='col-lg-9 col-md-7 col-sm-6 col-xs-12'>
+                        <h1>Lorem Titulo</h1>
+                        <p>Parrafo</p>
+                        <button>Leer mas</button>
+                    </div>
+                </aside>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+            </article>
+            <!-- Articulo 2 -->
+            <article class='row'>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+                <aside class='col-lg-8 col-md-8 col-sm-10 col-xs-12'>
+                    <figure class='col-lg-3 col-md-5 col-sm-6 col-xs-12'>
+                        <img src='img/galeria/imagen01.jpg' alt="">
+                    </figure>
+                    <div class='col-lg-9 col-md-7 col-sm-6 col-xs-12'>
+                        <h1>Lorem Titulo</h1>
+                        <p>Parrafo</p>
+                        <button>Leer mas</button>
+                    </div>
+                </aside>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+            </article>
+            <!-- Articulo 3 -->
+           <article class='row'>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+                <aside class='col-lg-8 col-md-8 col-sm-10 col-xs-12'>
+                    <figure class='col-lg-3 col-md-5 col-sm-6 col-xs-12'>
+                        <img src='img/galeria/imagen01.jpg' alt="">
+                    </figure>
+                    <div class='col-lg-9 col-md-7 col-sm-6 col-xs-12'>
+                        <h1>Lorem Titulo</h1>
+                        <p>Parrafo</p>
+                        <button>Leer mas</button>
+                    </div>
+                </aside>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+            </article>
+            <!-- Articulo 4 -->
+            <article class='row'>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+                <aside class='col-lg-8 col-md-8 col-sm-10 col-xs-12'>
+                    <figure class='col-lg-3 col-md-5 col-sm-6 col-xs-12'>
+                        <img src='img/galeria/imagen01.jpg' alt="">
+                    </figure>
+                    <div class='col-lg-9 col-md-7 col-sm-6 col-xs-12'>
+                        <h1>Lorem Titulo</h1>
+                        <p>Parrafo</p>
+                        <button>Leer mas</button>
+                    </div>
+                </aside>
+                <div class='col-lg-2 col-md-2 col-sm-1 col-xs-0'>
+                    <br>
+                </div>
+            </article>
         </div>
 
 
@@ -107,6 +204,7 @@
     <script src='js/my_slide.js'></script>
     <script src='js/galeria.js'></script>
     <script src='js/mouse.js'></script>
+    <script src='js/scroll.js'></script>
 </body>
 
 </html>
