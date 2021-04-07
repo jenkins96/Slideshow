@@ -97,11 +97,14 @@ let mf = {
         pf.validarTerminos = document.querySelector("#terminos").checked;
 
         if(!pf.validarUsuario || !pf.validarPassword || !pf.validarEmail ){
-            return false;
+
             document.querySelector("#labelEnviar").innerHTML= "<span style='color:red'>*Tiene errores en los datos que ha ingresado</span>"
+            return false;
+
         }else if(!pf.validarTerminos){
-             return false;
+             
             document.querySelector("#labelEnviar").innerHTML= "<span style='color:red'>*Favor acepte los términos y condiciones</span>"
+            return false;
         }else{
             return true;
         }

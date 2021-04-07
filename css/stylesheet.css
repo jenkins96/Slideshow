@@ -60,7 +60,15 @@ header nav ul li a{
 	padding:10px;
 	color:white;
 }
-
+header #btnMovil span i {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px;
+    background: silver;
+    cursor: pointer:
+}
 /*=============================================
 SLIDESHOW
 =============================================*/
