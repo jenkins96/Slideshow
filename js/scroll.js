@@ -30,11 +30,29 @@ let ms ={
         if(ps.posicionScroll > 100){
             ps.header.style.position = "fixed";
             ps.header.style.zIndex = "10";
-            ps.padding = 80;
+
+            if(window.matchMedia("(min-width:768px)").matches){
+
+                ps.padding = 80;
+            } else{
+
+                ps.padding = 140;
+            }
+
         } else {
             ps.header.style.position = "relative";
             ps.header.style.zIndex = "0";
-            ps.padding = 180;
+
+
+             if(window.matchMedia("(min-width:768px)").matches){
+
+                 ps.padding = 180;
+             } else{
+
+                 ps.padding = 280;
+
+             }
+
         }
         if(ps.posicionScroll > ps.cajaScroll.offsetTop){
             
@@ -44,7 +62,11 @@ let ms ={
             
         } else {
             for(let i = 0; i < ps.articulos.length; i++){
-                ps.articulos[i].style.marginLeft = ps.posicionScroll/25 - 100 + "%";
+                if(window.matchMedia("(min-width:768px)").matches){
+
+                     ps.articulos[i].style.marginLeft = ps.posicionScroll/25 - 100 + "%";
+                }
+               
             }
         }
     },
