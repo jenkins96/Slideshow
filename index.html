@@ -205,7 +205,7 @@
             <hr>
         </h1>
         <div id="formulario" class="row">
-            <form method="post" >
+            <form method="post" onsubmit="return mf.validarFormulario()" action="formulario.php">
             <h1>Ingrese sus datos</h1>
             <label for="name">Ingrese su usuario: <span class="obligatorio">*Campo obligatorio</span></label>
             <input id="name"
@@ -222,10 +222,11 @@
             name="password"
             type="password" 
             placeholder="Escriba su contraseña con un mínimo de ocho caracteres y debe incluir letras en mayúscula y números" 
-            required>
+            required
+            maxlength="15">
             </input>
 
-            <label for="email">Ingrese su contraseña: <span class="obligatorio">*Campo obligatorio</span></label>
+            <label for="email">Ingrese su correo electrónico: <span class="obligatorio">*Campo obligatorio</span></label>
             <input id="email"
             class="validar" 
             name="email"
@@ -265,6 +266,7 @@
             <input type="checkbox" id="terminos" name="termino" value="terminos">
             <label for="terminos" class="box"><span></span><a href="#" target="_blank">Acepto términos y condiciones</a></label>
 
+            <label id="labelEnviar"></label>
             <input type="submit" value="Enviar">
             </form>
         </div>
